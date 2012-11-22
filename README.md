@@ -6,6 +6,7 @@ my dot files ..
 To install ( I do not recommend it )
 
 `wget -c https://raw.github.com/alal3177/dotali/master/scripts/install_dotali.zsh`
+
 `zsh install_dotali.zsh`
 
 
