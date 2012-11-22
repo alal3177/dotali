@@ -40,7 +40,7 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 
 # source all files in local folder
-for afile in `ls $ZSH/local`
+for afile in `ls $HOME/dotali/local`
 do
     source $ZSH/local/afile
 done
