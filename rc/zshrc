@@ -42,5 +42,5 @@ source $ZSH/oh-my-zsh.sh
 # source all files in local folder
 for afile in `ls $HOME/dotali/local`
 do
-    source $ZSH/local/afile
+    source $HOME/dotali/local/afile
 done
