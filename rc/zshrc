@@ -39,3 +39,8 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
+# source all files in local folder
+for afile in `ls $ZSH/local`
+do
+    source $ZSH/local/afile
+done
