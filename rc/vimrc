@@ -10,6 +10,13 @@ set showmatch
 set hlsearch
 set nowrap
 set autoindent
-set shiftwidth=2
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4
 set expandtab
 set noswapfile
+set nocompatible
+set incsearch
+set smartcase
+set backspace=indent,eol,start
+set textwidth=72
