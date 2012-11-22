@@ -1,0 +1,15 @@
+set background=dark
+syntax on
+set mouse=a
+set mousehide
+scriptencoding utf-8
+set showmode
+set showmatch
+set ignorecase
+set showmatch
+set hlsearch
+set nowrap
+set autoindent
+set shiftwidth=2
+set expandtab
+set noswapfile
