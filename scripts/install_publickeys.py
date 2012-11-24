@@ -91,7 +91,17 @@ def key_exists(key):
     except:
         return False
 
-            
+def set_permission():
+    user_info = get_process_user_info()
+    ssh_folder = os.path.join(user_info.pw_dir, ".ssh")
+    auth_keys_file = os.path.join(ssh_folder, "authorized_keys")
+    try:
+        os.chmod(ssh_folder, 0700)
+        os.chmod(auth_keys_file, 0600)
+        return True
+    except:
+        return False
+
 def main():
     for key_loc in KEYS_ARRAY:
         key_info = get_key_from_url(key_loc)
@@ -99,6 +109,7 @@ def main():
             if not key_exists(key_info[0]):
                 if setup_ssh_folder():
                     if add_key(key_info[0]):
+                        set_permission()
                         print "key added successfully"
                     else:
                         print "failed to add the key" 
