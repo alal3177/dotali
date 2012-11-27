@@ -36,6 +36,8 @@ ZSH_THEME="alitheme"
 plugins=(git pip python screen osx)
 
 source $ZSH/oh-my-zsh.sh
+source $(dirname $ZSH)/aliases
+source $(dirname $ZSH)/exports
 
 # Customize to your needs...
 
