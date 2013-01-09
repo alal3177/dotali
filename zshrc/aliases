@@ -16,3 +16,9 @@ alias hidedotfiles="defaults write com.apple.Finder AppleShowAllFiles= -bool fal
 alias showdeskicons="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 alias hidedeskicons="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
 
+# update dotali
+update_dotali() {
+    cd ~/dotali
+    git submodule foreach git pull origin master
+    git pull
+}
