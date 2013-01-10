@@ -22,3 +22,10 @@ update_dotali() {
     git submodule foreach git pull origin master
     git pull
 }
+
+# restart openvpn
+restart_vpn() {
+
+    ssh remote_vpn sudo /etc/init.d/openvpn restart
+
+}
