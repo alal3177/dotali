@@ -29,3 +29,20 @@ restart_vpn() {
     ssh remote_vpn sudo /etc/init.d/openvpn restart
 
 }
+
+# cloud client
+list_instances() {
+    ~/tools/nimbus-cloud-client/bin/cloud-client.sh --conf ~/tools/nimbus-cloud-client/conf/$1.conf --status
+}
+
+list_images() {
+    ~/tools/nimbus-cloud-client/bin/cloud-client.sh --conf ~/tools/nimbus-cloud-client/conf/$1.conf --list
+}
+
+launch_image() {
+    ~/tools/nimbus-cloud-client/bin/cloud-client.sh --conf ~/tools/nimbus-cloud-client/conf/$1.conf --run --name $2 --hours $3
+}
+
+terminate_image() {
+    ~/tools/nimbus-cloud-client/bin/cloud-client.sh --conf ~/tools/nimbus-cloud-client/conf/$1.conf --terminate --handle $2
+}
