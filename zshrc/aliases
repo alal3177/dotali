@@ -46,3 +46,14 @@ launch_image() {
 terminate_image() {
     ~/tools/nimbus-cloud-client/bin/cloud-client.sh --conf ~/tools/nimbus-cloud-client/conf/$1.conf --terminate --handle $2
 }
+
+# workaround for ssh forwarding in screen
+fix_screen() {
+    if test "$SSH_AUTH_SOCK" ; 
+        then
+            ln -sf $SSH_AUTH_SOCK ~/.ssh/ssh_auth_sock
+    fi
+}
+fix_screen
+
+#
