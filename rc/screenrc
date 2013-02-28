@@ -16,5 +16,3 @@ activity "activity: window ~%"
 # to scroll with the mouse in Mac, this seems to fix the problem based
 # on a Google search
 termcapinfo xterm* ti@:te@
-# to have ssh auth forwarding work with screen
-setenv SSH_AUTH_SOCK $HOME/.ssh/ssh_auth_sock
