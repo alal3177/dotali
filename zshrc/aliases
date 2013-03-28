@@ -56,4 +56,10 @@ fix_screen() {
 }
 fix_screen
 
-#
+# pretty git log
+# https://coderwall.com/p/euwpig?i=3&p=1&t=git
+enable_git_pretty_log() {
+
+    git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+
+}
