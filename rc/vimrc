@@ -19,4 +19,5 @@ set nocompatible
 set incsearch
 set smartcase
 set backspace=indent,eol,start
-set textwidth=72
+set textwidth=100
+:au FocusLost * :wa
