@@ -1,0 +1,47 @@
+
+# Thanks to Matthew Monaco
+[user]
+    name = Ali Alzabarah
+    email = ali.alzabarah@cs.colorado.edu
+
+[merge]
+    tool = vimdiff
+    log = 1000
+    stat = true
+
+[mergetool]
+    prompt = false
+
+[diff]
+    tool = vimdiff
+    mnemonicprefix = true
+
+[difftool]
+    prompt = false
+
+[difftool "vimdiff"]
+    cmd = vimdiff -c 'cd $GIT_PREFIX' -c 'set readonly' -c 'wincmd l' "$LOCAL" "$REMOTE"
+
+
+[color]
+    ui = auto
+
+[format]
+    pretty = %h %ar %Cred %an %Cgreen %s %Creset %d
+    thread = shallow
+
+[rebase]
+    stat = true
+    autosquash = true
+
+[github]
+    user = alal3177
+ 
+[push]
+    default = simple
+
+[alias]
+    i = !cd ${GIT_PREFIX:-.} && git init && touch .gitignore && git add .gitignore && git commit -m init
+    d = difftool
+    m = mergetool
+    l = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
